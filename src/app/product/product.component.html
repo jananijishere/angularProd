@@ -1,0 +1,23 @@
+
+<button (click)="fetchdata()" >Get</button>
+<button (click)="postNewData()">POST</button>
+<button (click)="putNewData()">PUT</button>
+<button (click)="deleteOneData()">DELETE</button>
+<table border="1" *ngIf="productData != ''">
+    <tr>
+        <th>ProductName</th>
+        <th>ProductDesc</th>
+        <th>ProductPrice</th>
+        <th>ManuDate</th>
+        <th>ExpDate</th>
+    </tr>
+
+    <tr *ngFor="let p of productData">
+        <td>{{p.ProductName}}</td>
+        <td>{{p.ProductDesc}}</td>
+        <td>{{p.ProductPrice}}</td>
+        <td>{{p.ManuDate}}</td>
+        <td>{{p.ExpDate}}</td>
+    </tr>
+
+</table>
